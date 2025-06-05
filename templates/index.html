@@ -25,7 +25,15 @@
   <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="../static/../static/assets/css/main.css" rel="stylesheet">
+  <link href="../static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Invent
+  * Template URL: https://bootstrapmade.com/invent-bootstrap-business-template/
+  * Updated: May 12 2025 with Bootstrap v5.3.6
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -363,204 +371,90 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Forms</h2>
+        <p>see your disease risks</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 mb-5">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="info-card">
-              <div class="icon-box">
-                <i class="bi bi-geo-alt"></i>
-              </div>
-              <h3>Our Address</h3>
-              <p>2847 Rainbow Road, Springfield, IL 62701, USA</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="info-card">
-              <div class="icon-box">
-                <i class="bi bi-telephone"></i>
-              </div>
-              <h3>Contact Number</h3>
-              <p>Mobile: +1 (555) 123-4567<br>
-                Email: info@example.com</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="info-card">
-              <div class="icon-box">
-                <i class="bi bi-clock"></i>
-              </div>
-              <h3>Opening Hour</h3>
-              <p>Monday - Saturday: 9:00 - 18:00<br>
-                Sunday: Closed</p>
-            </div>
-          </div>
-        </div>
-
         <div class="row">
           <div class="col-lg-12">
             <div class="form-wrapper" data-aos="fade-up" data-aos-delay="400">
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="row">
+                  
                   <div class="col-md-6 mb-3 form-group">
                     <div class="input-group">
                       <span class="input-group-text"></span>
-                      <input type="text" name="gender" class="form-control" placeholder="Gender" required="">
+                      <input type="number" class="form-control" name="number" id="age" placeholder="Age" required="" data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      title="Age: put the number of your age, example: 24">
                     </div>
+                    
                   </div>
                   <div class="col-md-6 mb-3 form-group">
                     <div class="input-group">
                       <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="number" placeholder="Age" required="">
+                      <input type="number" name="totchole" id="tot_chole" class="form-control" placeholder="Total Cholesterol" required="" data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      title="Total Cholesterol[mg/dL], example 193.0 ">
                     </div>
                   </div>
                 </div>
+
                 <div class="row">
                   <div class="col-md-6 mb-3 form-group">
                     <div class="input-group">
                       <span class="input-group-text"></span>
-                      <input type="number" name="height" class="form-control" placeholder="Height" required="">
+                      <input type="number" name="height" id="height" class="form-control" placeholder="Height" required="" data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      title="Height: put in meters (m), your height, example: 170">
                     </div>
                   </div>
                   <div class="col-md-6 mb-3 form-group">
                     <div class="input-group">
                       <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="Weight" placeholder="Weight" required="">
+                      <input type="number" class="form-control" name="Weight" id="weight" placeholder="Weight" required="" data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      title="Weight: put in kilogram (kg), your weight, example 65">
                     </div>
+                    
                   </div>
                 </div>
+
+                
+                
+                
                 <div class="row">
                   <div class="col-md-6 mb-3 form-group">
                     <div class="input-group">
                       <span class="input-group-text"></span>
-                      <input type="number" name="sightleft" class="form-control" placeholder="Sight Left" required="">
+                      <input type="number" name="dbp" id="DBP" class="form-control" placeholder="DBP" required="" data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      title="Diastolic blood pressure[mmHg]: the lower number in a blood pressure reading, example 80.0" >
                     </div>
                   </div>
                   <div class="col-md-6 mb-3 form-group">
                     <div class="input-group">
                       <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="sighright" placeholder="Sight Right" required="">
+                      <input type="number" class="form-control" name="blds" id="BLDS" placeholder="BLDS" required=""  data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      title="BLDS or FSG(fasting blood glucose)[mg/dL], example 101.0">
+                    </div>    
+                      </div>
                     </div>
+                    <div class="row">
+                  <div class="col-md-6 mb-3 form-group">
+                    <div class="input-group">
+                      <span class="input-group-text"></span>
+                      <input type="number" name="sbp"  id="SBP" class="form-control" placeholder="SBP" required="" data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      title="Systolic blood pressure[mmHg]: is the highest value that appears during blood pressure measurement, for example 142.0">
+                    </div>
+                  
                   </div>
+                  
                 </div>
-                <div class="row">
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" name="hearleft" class="form-control" placeholder="Hear Left" required="">
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="hearright" placeholder="Hear Right" required="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" name="sbp" class="form-control" placeholder="SBP" required="">
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="waistline" placeholder="Waisttline" required="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" name="dbp" class="form-control" placeholder="DBP" required="">
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="blds" placeholder="BLDS" required="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" name="totchole" class="form-control" placeholder="Total Cholesterol" required="">
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="triglyceride" placeholder="Triglyceride" required="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" name="hemoglobin" class="form-control" placeholder="Hemoglobin" required="">
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="urine_protein" placeholder="Urine Protein" required="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" name="serumcreatinine" class="form-control" placeholder="Serum Creatinine" required="">
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="sgot_ast" placeholder="AST Enzymes" required="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" name="sgot-alt" class="form-control" placeholder="ALT enzymes" required="">
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" class="form-control" name="gammaGTP" placeholder="Gamma-Glutamil Transferase" required="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="number" name="smk_stt" class="form-control" placeholder="SMK" required="">
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3 form-group">
-                    <div class="input-group">
-                      <span class="input-group-text"></span>
-                      <input type="text" class="form-control" name="drkYn" placeholder="Drink(Y/N)" required="">
-                    </div>
-                  </div>
-                </div>
+
 
                 <div class="row mt-3">
                   <div class="text-center">
@@ -574,6 +468,13 @@
         </div>
 
       </div>
+      <script>
+                      // Inicializa todos os tooltips na página
+                      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                        return new bootstrap.Tooltip(tooltipTriggerEl)
+                      })
+                    </script>
     </section><!-- /Contact Section -->
 
   </main>
@@ -587,10 +488,10 @@
             <span class="sitename">MyWebsite</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Rua Serrania, 21</p>
+            <p>Recife, PE 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+55 (81)99876-6896</span></p>
+            <p><strong>Email:</strong> <span>roca+@gmail.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
