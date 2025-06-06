@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Predição</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 30px auto;
+        }
+        h1, h2 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        .section p {
+            margin: 5px 0;
+        }
+        .section strong {
+            color: #007bff;
+        }
+        .result-item {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados das Predições de Saúde</h1>
+
+        <div class="section">
+            <h2>Predições:</h2>
+            <p class="result-item"><strong>Risco de Colesterol Alto:</strong> {{ colesterol|int }}</p>
+            <p class="result-item"><strong>Risco de Diabetes:</strong> {{ diabetes|int }}</p>
+            <p class="result-item"><strong>Risco de Obesidade:</strong> {{ obesidade|int }}</p>
+            <p class="result-item"><strong>Risco de Hipertensão:</strong> {{ hipertensao|int }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Dados Fornecidos:</h2>
+            <p><strong>Idade:</strong> {{ idade }} anos</p>
+            <p><strong>Altura:</strong> {{ "%.2f"|format(altura) }} m</p> 
+            <p><strong>Peso:</strong> {{ peso }} kg</p>
+            <p><strong>IMC (BMI):</strong> {{ "%.2f"|format(bmi) }}</p>
+            <p><strong>Pressão Arterial Sistólica (SBP):</strong> {{ sbp }} mmHg</p>
+            <p><strong>Pressão Arterial Diastólica (DBP):</strong> {{ dbp }} mmHg</p>
+            <p><strong>Glicose no Sangue (BLDS):</strong> {{ blds }} mg/dL</p>
+            <p><strong>Colesterol Total:</strong> {{ tot_chole }} mg/dL</p>
+        </div>
+
+        <a href="/" class="back-link">Fazer Outra Predição</a>
+    </div>
+</body>
+</html>
