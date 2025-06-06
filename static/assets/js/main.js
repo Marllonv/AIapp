@@ -1,11 +1,3 @@
-/**
-* Template Name: Invent
-* Template URL: https://bootstrapmade.com/invent-bootstrap-business-template/
-* Updated: May 12 2025 with Bootstrap v5.3.6
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 

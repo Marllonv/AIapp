@@ -213,7 +213,5 @@ def predict():
         # Se a rota for acessada por GET (e não por POST do formulário), redireciona para a home
         return redirect(url_for('home'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
