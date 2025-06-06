@@ -5,16 +5,6 @@ from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__)
 
-# --- Código de carregamento dos modelos aqui (como no seu código atual) ---
-# Garanta que as variáveis:
-# model_colesterol
-# model_diabetes
-# model_obesidade
-# model_hipertensao
-# estejam definidas (carregadas ou None) antes desta função.
-# O código de carregamento dos modelos deve estar fora das funções de rota,
-# tipicamente logo após a criação do 'app = Flask(__name__)'.
-
 MODEL_PATH_Colesterol = 'modelo-colesterol.pkcls'
 MODEL_PATH_Diabetes = 'modelo-diabetes.pkcls'
 MODEL_PATH_Obesidade = 'modelo-obesidade.pkcls'
@@ -94,10 +84,7 @@ def predict():
                 BMI = weight / (height_m ** 2)
             else:
                 return "Erro: Altura inválida. Por favor, insira um valor positivo.", 400 # Retorna erro para o usuário
-            
-            # --- 3. Criar um DataFrame único com todos os atributos capturados e calculados ---
-            # Defina a ordem das colunas para este DataFrame central.
-            # Esta ordem é para sua organização e debug.
+
             all_features_ordered = [
                 'idade', 'altura', 'peso', 'BMI', 'sbp', 'dbp', 'blds', 'colesterol'
             ]
@@ -121,13 +108,6 @@ def predict():
             print(user_data)
             print("-" * 30)
 
-            # --- 4. Preparar os dados para CADA modelo específico a partir de 'user_data' ---
-            # CORREÇÃO PRINCIPAL: As listas de features agora contêm 8 features,
-            # presumindo que seus modelos foram treinados com todas elas na mesma ordem.
-            # AJUSTE AQUI SE SEUS MODELOS Orange3 USAM SUBSETS OU ORDEM DIFERENTE!
-
-            # Para todos os modelos, vamos assumir que eles esperam as 8 features na mesma ordem
-            # em que elas aparecem no 'user_data'.
             common_model_features = [
                 'idade', 'altura', 'peso', 'BMI', 'sbp', 'dbp', 'blds', 'colesterol'
             ]
@@ -213,5 +193,5 @@ def predict():
         # Se a rota for acessada por GET (e não por POST do formulário), redireciona para a home
         return redirect(url_for('home'))
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
